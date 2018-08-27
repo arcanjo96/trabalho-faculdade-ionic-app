@@ -1,0 +1,7 @@
+{
+  "name": "meus-lembretes",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
