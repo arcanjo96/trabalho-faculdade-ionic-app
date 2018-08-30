@@ -22,15 +22,25 @@ export class DashboardPage {
     private hora;
 
     eventos: Evento[] = [
-      new Evento(this.descricao = this.navParams.get("desc"), this.data = this.navParams.get("data_evento"), this.hora = this.navParams.get("hora_evento"))
+      //new Evento(this.descricao = this.navParams.get("desc"), this.data = this.navParams.get("data_evento"), this.hora = this.navParams.get("hora_evento"))
+
     ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {   
 
   }
 
-  ionViewDidLoad() {
+ 
+  ionViewDidEnter() {
+    this.eventos.push(new Evento(this.descricao = this.navParams.get("desc"), this.data = this.navParams.get("data_evento"), this.hora = this.navParams.get("hora_evento")));
+
+  }
+
+  ionViewWillEnter() {
     this.menuCtrl.enable(true);
+    //this.eventos.push(new Evento(this.descricao = this.navParams.get("desc"), this.data = this.navParams.get("data_evento"), this.hora = this.navParams.get("hora_evento")));
+    //this.eventos.push({desc: this.descricao = this.navParams.get("desc"), data: this.data = this.navParams.get("data_evento"), hora: this.hora = this.navParams.get("hora_evento")});
+    //console.log("PAGE");
   }
 
   callAdd() {
