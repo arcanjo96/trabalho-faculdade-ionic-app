@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Lembrete</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list >
+    <ion-item>
+      <ion-label floating >Descrição</ion-label>
+      <ion-input type="text" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data</ion-label>
+      <ion-datetime displayFormat="DD/MMMM/YYYY" [(ngModel)]="data"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="hora"></ion-datetime>
+    </ion-item>
+    <button ion-button full (click)="eventoAdicionado()">Adicionar</button>
+  </ion-list>
+</ion-content>
